@@ -1,0 +1,25 @@
+{
+  "name": "ng-d3matrix",
+  "version": "0.1.0",
+  "homepage": "https://github.com/komushi/ng-d3matrix",
+  "authors": [
+    "Lei Xu <komushi@gmail.com>"
+  ],
+  "description": "angular directive for d3.js matrix",
+  "keywords": [
+    "angular",
+    "d3.js",
+    "matrix"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^3.5.17"
+  }
+}
