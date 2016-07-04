@@ -33,7 +33,10 @@
           var cellSize = 12;
           var gapSize = 10;
           var z = d3.scale.linear().domain([ 0, 4 ]).clamp(true);
-          var c = d3.scale.category10().domain(d3.range(10));
+          // var c = d3.scale.category10().domain(d3.range(10));
+          var c = d3.scale.linear().domain([1,length])
+                  .interpolate(d3.interpolateHcl)
+                  .range([d3.rgb("#0d47a1"), d3.rgb('#e3f2fd')]);
 
           var rawSvg=elem.find('svg');
 
@@ -69,9 +72,9 @@
             // Convert links to matrix; count character occurrences.
             matrixJson.links.forEach(function(link) {
               matrix[link.source][link.target].z += link.value;
-              matrix[link.target][link.source].z += link.value;
-              matrix[link.source][link.source].z += link.value;
-              matrix[link.target][link.target].z += link.value;
+              // matrix[link.target][link.source].z += link.value;
+              // matrix[link.source][link.source].z += link.value;
+              // matrix[link.target][link.target].z += link.value;
               nodes[link.source].count += link.value;
               nodes[link.target].count += link.value;
             });
