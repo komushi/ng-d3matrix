@@ -1,0 +1,114 @@
+{
+    "nodes": [
+      {
+        "name": "C166.160",
+        "rank": 1
+      },
+      {
+        "name": "C158.161",
+        "rank": 2
+      },
+      {
+        "name": "C157.162",
+        "rank": 3
+      },
+      {
+        "name": "C158.162"
+      },
+      {
+        "name": "C155.167",
+        "rank": 4
+      },
+      {
+        "name": "C155.169"
+      },
+      {
+        "name": "C159.163",
+        "rank": 5
+      },
+      {
+        "name": "C160.162",
+        "rank": 6
+      },
+      {
+        "name": "C163.157"
+      },
+      {
+        "name": "C159.154",
+        "rank": 7
+      },
+      {
+        "name": "C160.152"
+      },
+      {
+        "name": "C157.161",
+        "rank": 8
+      },
+      {
+        "name": "C158.166",
+        "rank": 9
+      },
+      {
+        "name": "C157.167"
+      },
+      {
+        "name": "C160.161",
+        "rank": 10
+      },
+      {
+        "name": "C160.160"
+      }
+    ],
+    "links": [
+      {
+        "source": 0,
+        "target": 0,
+        "value": 10
+      },
+      {
+        "source": 1,
+        "target": 1,
+        "value": 9
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "value": 8
+      },
+      {
+        "source": 4,
+        "target": 5,
+        "value": 7
+      },
+      {
+        "source": 6,
+        "target": 6,
+        "value": 6
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "value": 5
+      },
+      {
+        "source": 9,
+        "target": 10,
+        "value": 4
+      },
+      {
+        "source": 11,
+        "target": 11,
+        "value": 3
+      },
+      {
+        "source": 12,
+        "target": 13,
+        "value": 2
+      },
+      {
+        "source": 14,
+        "target": 15,
+        "value": 1
+      }
+    ]
+  }

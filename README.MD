@@ -29,12 +29,13 @@ bower install --save ng-d3matrix
 
 <head>
   <title>matrix</title>
-
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
 
-    <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3matrix/master/src/ng-d3matrix.js"></script>
-    <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3matrix/master/src/css/ng-d3matrix.css" />
+    <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3matrix/master/src/ng-d3matrix.js"></script> 
+
+    
+    <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3matrix/master/src/css/ng-d3matrix.css" /> 
 
 </head>
 
@@ -45,9 +46,8 @@ bower install --save ng-d3matrix
 var app = angular.module("d3matrixApp", ['ngD3matrix']); 
 app.controller("matrixCtrl", ['$scope', '$http', function($scope, $http) {
   
-
   // Adjacency Matrix
-  $http.get('data/matrix.json')
+  $http.get('data/top1.json')
        .success(function(res){
           $scope.matrixJson = res;
         });
@@ -57,12 +57,13 @@ app.controller("matrixCtrl", ['$scope', '$http', function($scope, $http) {
 
 <div ng-controller="matrixCtrl">
   <div style="width:800px; margin:0 auto;">
-    <h2>Adjacency Matrix - Miserables</h2>
+    <h2>Adjacency Matrix - Top Ten</h2>
     <div adjacency-matrix
       data="matrixJson"
-      width="720"
-      height="720"
-      json-path="">
+      width="800"
+      height="800"
+      json-path=""
+      color-range="#0d47a1,#e3f2fd">
     </div>
   </div>
 </div>
@@ -70,5 +71,6 @@ app.controller("matrixCtrl", ['$scope', '$http', function($scope, $http) {
 
 </body>
 </html>
+
 
 ```
