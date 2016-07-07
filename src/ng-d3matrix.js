@@ -136,13 +136,15 @@
               matrix[link.source][link.target].z = link.value;
               matrix[link.source][link.target].c = nodes[link.source].rank;
          
-              if (nodes[link.source].rank) {
-                if (link.value > nodes[link.source].count) {
-                  nodes[link.source].count = link.value;  
-                }
-              }
+              // if (nodes[link.source].rank) {
+              //   if (link.value > nodes[link.source].count) {
+              //     nodes[link.source].count = link.value;  
+              //   }
+              // }
 
-              
+                if (nodes[link.source].rank) {
+                  nodes[link.source].count += link.value;  
+                }
             });
 
 // console.log(matrix.length); 
