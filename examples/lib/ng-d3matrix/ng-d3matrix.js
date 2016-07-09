@@ -1,4 +1,4 @@
-/* 0.1.1 */
+/* 0.1.3 */
 
 ( function () {
   'use strict';
@@ -147,13 +147,13 @@
             matrixJson.links.forEach(function(link) {
 
               matrix[link.source][link.target].z = link.value;
-              matrix[link.source][link.target].c = nodes[link.source].rank;
+              matrix[link.source][link.target].c = link.rank;
          
-              if (nodes[link.source].rank) {
+              if (nodes[link.source].group > 0) {
                 nodes[link.source].count += link.value;  
               }
             });
-
+// console.log(JSON.stringify(nodes));
             // Precompute the orders.
             var orders = {
               name : d3.range(n).sort(
@@ -162,10 +162,12 @@
                         nodes[b].name);
                   }),
               count : d3.range(n).sort(function(a, b) {
-                return nodes[b].count - nodes[a].count;
-              }),
-              rank : d3.range(n).sort(function(a, b) {
-                return nodes[b].rank - nodes[a].rank;
+                if (nodes[b].count == nodes[a].count) {
+                  return nodes[a].rank - nodes[b].rank;
+                }
+                else {
+                  return nodes[b].count - nodes[a].count;
+                }
               })
             };
 

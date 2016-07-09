@@ -1,93 +1,140 @@
 {
   "nodes": [
     {
-      "name": "中央区 新川",
-      "rank": 1
+      "name": "C166.160",
+      "rank": 1,
+      "group": 1
     },
     {
-      "name": "さいたま市西区 指扇領別所",
-      "rank": 2
+      "name": "C160.152",
+      "rank": 2,
+      "group": 1
     },
     {
-      "name": "C160.159"
+      "name": "C159.157",
+      "group": 0
     },
     {
-      "name": "C158.164",
-      "rank": 3
+      "name": "C153.169",
+      "rank": 3,
+      "group": 1
     },
     {
-      "name": "C157.162",
-      "rank": 4
+      "name": "C155.166",
+      "group": 0
     },
     {
-      "name": "C159.162",
-      "rank": 5
+      "name": "C160.161",
+      "rank": 4,
+      "group": 1
     },
     {
-      "name": "C157.164"
-    },
-    {
-      "name": "C161.160"
+      "name": "C160.160",
+      "group": 0
     },
     {
       "name": "C158.161",
-      "rank": 9
+      "rank": 5,
+      "group": 1
     },
     {
-      "name": "C166.160",
-      "rank": 10
+      "name": "C158.168",
+      "rank": 6,
+      "group": 1
+    },
+    {
+      "name": "C159.167",
+      "group": 0
+    },
+    {
+      "name": "C162.170",
+      "rank": 7,
+      "group": 1
+    },
+    {
+      "name": "C163.169",
+      "group": 0
+    },
+    {
+      "name": "C161.160",
+      "rank": 8,
+      "group": 1
+    },
+    {
+      "name": "C155.167",
+      "rank": 9,
+      "group": 1
+    },
+    {
+      "name": "C155.169",
+      "group": 0
+    },
+    {
+      "name": "C158.166",
+      "rank": 10,
+      "group": 1
     }
   ],
   "links": [
     {
       "source": 0,
       "target": 0,
-      "value": 50
+      "value": 7,
+      "rank": 1
     },
     {
       "source": 1,
       "target": 2,
-      "value": 28
+      "value": 5,
+      "rank": 2
     },
     {
       "source": 3,
-      "target": 3,
-      "value": 27
-    },
-    {
-      "source": 4,
       "target": 4,
-      "value": 27
+      "value": 5,
+      "rank": 3
     },
     {
       "source": 5,
-      "target": 2,
-      "value": 27
-    },
-    {
-      "source": 4,
       "target": 6,
-      "value": 25
+      "value": 5,
+      "rank": 4
     },
     {
-      "source": 4,
-      "target": 0,
-      "value": 24
-    },
-    {
-      "source": 1,
+      "source": 7,
       "target": 7,
-      "value": 23
+      "value": 5,
+      "rank": 5
     },
     {
       "source": 8,
-      "target": 8,
-      "value": 23
+      "target": 9,
+      "value": 4,
+      "rank": 6
     },
     {
-      "source": 9,
-      "target": 9,
-      "value": 22
+      "source": 10,
+      "target": 11,
+      "value": 3,
+      "rank": 7
+    },
+    {
+      "source": 12,
+      "target": 5,
+      "value": 3,
+      "rank": 8
+    },
+    {
+      "source": 13,
+      "target": 14,
+      "value": 3,
+      "rank": 9
+    },
+    {
+      "source": 15,
+      "target": 8,
+      "value": 3,
+      "rank": 10
     }
   ]
 }
