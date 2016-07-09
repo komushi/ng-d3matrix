@@ -99,17 +99,23 @@
               d3.selectAll("text").classed("active", false);
             }
 
-            var wrap = function(text, width) {
+            var wrap = function(text, width, isHorizontal) {
               text.each(function() {
                 var text = d3.select(this),
                     words = text.text().split(/\s+/).reverse(),
                     word,
                     line = [],
                     lineNumber = 0,
-                    lineHeight = 1.1, // ems
+                    lineHeight,
                     y = text.attr("y"),
                     dy = parseFloat(text.attr("dy")),
                     tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+                if (isHorizontal) {
+                  lineHeight = 1.1;
+                }
+                else {
+                  lineHeight = 0.1;
+                }
                 while (word = words.pop()) {
                   line.push(word);
                   tspan.text(line.join(" "));
@@ -198,7 +204,7 @@
                   });
 
             svg.selectAll(".row text")
-              .call(wrap, margin.left);
+              .call(wrap, margin.left, true);
 
 
             svg.selectAll(".column")
@@ -222,7 +228,7 @@
                   });
 
             svg.selectAll(".column text")
-              .call(wrap, margin.top);
+              .call(wrap, margin.top, false);
           }
 
 

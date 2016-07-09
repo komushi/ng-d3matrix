@@ -2,9 +2,9 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 svg {
-  font-size: 10px;
-  font-family: 'Klee', 'Noto Sans Japanese',  'Meiryo';
-  font-weight: 700;
+  font-size: 11px;
+  font-family: 'Noto Sans Japanese', 'Klee', 'Meiryo';
+  font-weight: 500;
 }
 
 .cell {
