@@ -1,1 +1,1 @@
-svg{font:10px sans-serif}.cell{stroke:#d3d3d3;stroke-width:1}text.active{fill:red}
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);svg{font-size:10px;font-family:Klee,'Noto Sans Japanese',Meiryo;font-weight:700}.cell{stroke:#d3d3d3;stroke-width:1}text.active{fill:red}
