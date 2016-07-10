@@ -1,4 +1,4 @@
-/* 0.1.3 */
+/* 0.1.4 */
 
 ( function () {
   'use strict';
@@ -137,6 +137,7 @@
             // Compute index per node.
             nodes.forEach(function(node, i) {
               node.count = 0;
+              node.group = 0;
               matrix[i] = d3.range(n).map(function(j) {
                 return {
                   x : j,
@@ -155,11 +156,14 @@
               matrix[link.source][link.target].z = link.value;
               matrix[link.source][link.target].c = link.rank;
          
+              nodes[link.source].group = 1;
+
               if (nodes[link.source].group > 0) {
-                nodes[link.source].count += link.value;  
+                nodes[link.source].count += link.value;
+                nodes[link.source].rank = link.rank;
               }
             });
-// console.log(JSON.stringify(nodes));
+console.log(JSON.stringify(nodes));
             // Precompute the orders.
             var orders = {
               name : d3.range(n).sort(
