@@ -1,4 +1,4 @@
-/* 0.1.4 */
+/* 0.1.5 */
 
 ( function () {
   'use strict';
@@ -32,6 +32,12 @@
 
           var d3 = $window.d3;
 
+          /* Initialize tooltip */
+          var tip = d3.tip().attr('class', 'd3-tip').offset([-10, 0])
+            .html(function(d) { 
+              return "<strong>Count:</strong> <span style='color:red'>" + d.z + "</span>";
+            });
+
           var rawSvg = elem.find('svg');
 
           var svg = d3.select(rawSvg[0])
@@ -39,7 +45,8 @@
             .attr("height", height + margin.top + margin.bottom)
             .style("margin-left", margin.left + "px")
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .call(tip);
 
           var render = function(matrixJson){
 
@@ -93,10 +100,14 @@
                   function(d, i) {
                     return i == p.x;
                   });
+              if (p.z > 0) {
+                tip.show(p);  
+              }
             }
             
             var mouseout = function () {
               d3.selectAll("text").classed("active", false);
+              tip.hide();
             }
 
             var wrap = function(text, width, isHorizontal) {
@@ -163,7 +174,7 @@
                 nodes[link.source].rank = link.rank;
               }
             });
-console.log(JSON.stringify(nodes));
+
             // Precompute the orders.
             var orders = {
               name : d3.range(n).sort(

@@ -1,0 +1,99 @@
+{
+    "nodes": [
+      {
+        "name": "海老名市 河原口"
+      },
+      {
+        "name": "品川区 豊町"
+      },
+      {
+        "name": "品川区 南大井"
+      },
+      {
+        "name": "海老名市 上郷"
+      },
+      {
+        "name": "中央区 日本橋小網町"
+      },
+      {
+        "name": "海老名市 上河内"
+      },
+      {
+        "name": "熊谷市 成沢"
+      },
+      {
+        "name": "相模原市 鹿沼台"
+      },
+      {
+        "name": "相模原市 藤野町澤井"
+      },
+      {
+        "name": "中央区 日本橋茅場町"
+      },
+      {
+        "name": "板橋区 泉町"
+      }
+    ],
+    "links": [
+      {
+        "source": 0,
+        "target": 0,
+        "value": 82,
+        "rank": 1
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "value": 70,
+        "rank": 2
+      },
+      {
+        "source": 3,
+        "target": 3,
+        "value": 65,
+        "rank": 3
+      },
+      {
+        "source": 4,
+        "target": 2,
+        "value": 64,
+        "rank": 4
+      },
+      {
+        "source": 5,
+        "target": 5,
+        "value": 55,
+        "rank": 5
+      },
+      {
+        "source": 6,
+        "target": 6,
+        "value": 55,
+        "rank": 6
+      },
+      {
+        "source": 7,
+        "target": 8,
+        "value": 54,
+        "rank": 7
+      },
+      {
+        "source": 9,
+        "target": 2,
+        "value": 52,
+        "rank": 8
+      },
+      {
+        "source": 7,
+        "target": 0,
+        "value": 52,
+        "rank": 9
+      },
+      {
+        "source": 1,
+        "target": 10,
+        "value": 48,
+        "rank": 10
+      }
+    ]
+  }
