@@ -4,6 +4,7 @@
   "description": "angular directive for d3.js matrix",
   "dependencies": {
     "d3": "^3.5.17"
+    "d3-tip": "^0.6.7"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
