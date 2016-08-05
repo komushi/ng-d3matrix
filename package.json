@@ -1,6 +1,6 @@
 {
   "name": "ng-d3matrix",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "angular directive for d3.js matrix",
   "dependencies": {
     "angular": "~1.5",
