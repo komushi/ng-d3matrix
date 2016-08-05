@@ -31,6 +31,9 @@ bower install --save ng-d3matrix
   <title>matrix</title>
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/4.1.0/rx.all.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rx-angular/1.1.3/rx.angular.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3matrix/master/src/ng-d3matrix.js"></script> 
     <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3matrix/master/src/css/ng-d3matrix.css" /> 
 
