@@ -1,6 +1,6 @@
 {
   "name": "ng-d3matrix",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "homepage": "https://github.com/komushi/ng-d3matrix",
   "authors": [
     "Lei Xu <komushi@gmail.com>"
@@ -22,6 +22,8 @@
   "dependencies": {
     "angular": "~1.5",
     "d3": "^3.5.5",
-    "d3-tip": "^0.6.7"
+    "d3-tip": "^0.6.7",
+    "rxjs": "*",
+    "angular-rx": "~1.1"
   }
 }

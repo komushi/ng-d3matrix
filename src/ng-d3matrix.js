@@ -3,8 +3,8 @@
 ( function () {
   'use strict';
 
-  angular.module('ngD3matrix',[])
-  .directive('adjacencyMatrix', function($parse, $window){
+  angular.module('ngD3matrix',['rx'])
+  .directive('adjacencyMatrix', function($parse, $window, observeOnScope){
      return{
         restrict:'EA',
         scope: {
@@ -77,14 +77,7 @@
                 .style(
                     "fill",
                     function(d) {
-                      var colorObj;
-                      // if (nodes[d.y].rank) {
-                      //  colorObj = getColor(nodes[d.y].rank);  
-                      // }
-                      
-                      colorObj = getColor(d.c);
-
-                      return colorObj;
+                      return getColor(d.c);
                     })
                 .on("mouseover", mouseover)
                 .on("mouseout", mouseout);
@@ -261,13 +254,12 @@
           }
           else
           {
-            // watch for data changes and re-render
-            scope.$watch('data', function(newVals, oldVals) {
-              if (newVals) 
-              {
-                return render(newVals);
+            // rx observeOnScope for data changes and re-render
+            observeOnScope(scope, 'data').subscribe(function(change) {
+              if (change.newValue) {
+                return render(change.newValue);
               }
-            }, true);  
+            }); 
           }
 
           d3.select(self.frameElement).style("height", height + "px");

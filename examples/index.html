@@ -5,9 +5,11 @@
   <title>matrix</title>
 
 
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/d3/d3.min.js"></script>
-    <script src="lib/d3-tip/d3-tip.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/d3/d3.min.js"></script>
+    <script type="text/javascript" src="lib/d3-tip/d3-tip.js"></script>
+    <script type="text/javascript" src="lib/rxjs/rx.all.min.js"></script>
+    <script type="text/javascript" src="lib/rx-angular/rx.angular.min.js"></script>
     <script type="text/javascript" src="lib/ng-d3matrix/ng-d3matrix.js"></script>
     <link rel="stylesheet" href="lib/ng-d3matrix/css/ng-d3matrix.css" /> 
 
@@ -20,30 +22,30 @@
 var app = angular.module("d3matrixApp", ['ngD3matrix']); 
 app.controller("matrixCtrl", ['$scope', '$http', '$interval', function($scope, $http, $interval) {
   
-  // var jsons = [];
+  var jsons = [];
 
+  $http.get('data/top2.json')
+       .success(function(res){
+          jsons.push(res);
+        });
 
-  // $http.get('data/top2.json')
-  //      .success(function(res){
-  //         jsons.push(res);
-  //       });
+  $http.get('data/top1.json')
+       .success(function(res){
+          jsons.push(res);
+        });
 
-  // $http.get('data/top1.json')
-  //      .success(function(res){
-  //         jsons.push(res);
-  //       });
+  $interval(function(){
+    var idx = Math.floor(Math.random() * 2);
+    $scope.matrixJson = jsons[idx];
+  }, 500, 500);
 
-  // $interval(function(){
-  //   var idx = Math.floor(Math.random() * 2);
-  //   $scope.matrixJson = jsons[idx];
-  // }, 1000, 1000);
-
-  // Adjacency Matrix
+/*
+  Adjacency Matrix
   $http.get('data/top2.json')
        .success(function(res){
           $scope.matrixJson = res;
         });
-
+*/
   
 
 }]);
